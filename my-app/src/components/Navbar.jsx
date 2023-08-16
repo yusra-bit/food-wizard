@@ -8,7 +8,7 @@ export const Navbar = () => {
     return (
     <nav>  
 
-        <Link to="/" className="title">Food Wizard🍜
+        <Link to="/" className="title">Food Wizard 🍜 🧙
         </Link>
         <div className="menu" 
         onClick={() => {
