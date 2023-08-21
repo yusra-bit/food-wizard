@@ -23,10 +23,12 @@ for (let i = 1; i <= 20; i++) {
             let amount = amt[index];
             
             if (amount === "" || amount === " ") {
-                ingredients.push([`${item}`, "None"]);
-      
+                
+                ingredients.push([`${item}`, "None"]);      
+
             } else {
-                ingredients.push([`${amount}`.split("/")[0], `${amount}`.split("/")[1], `${item}`]);
+                
+                ingredients.push([`${amount}`, `${item}`]);
             }
           });
           ingredients = ingredients.filter((item) => item[0] !== "");
