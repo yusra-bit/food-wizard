@@ -34,32 +34,19 @@ for (let i = 1; i <= 20; i++) {
           ingredients = ingredients.filter((item) => item[0] !== "");
 
 
-  return (
-    <div className='recipeCard'>
-        <img 
-        src={strMealThumb}
-        alt={strMeal}
-        className='card-img'/>
-
-        <div>
-            <span className='category'>{strCategory}</span>
-            <h3>{strMeal}</h3>
+ return (
+        <div className="card">
+            <img
+                src={strMealThumb}
+                alt={strMeal}
+                className="card-image"
+            />
+            <div className="card-body">
             
-              
-            <span>
-        {ingredients.map((item) => (
-            <li key={item[1]}>
-                {item[0]} {item[1]} {item[2]}
-            </li>
-        ))}
-    </span>
-            
-    <p className='category'>{strInstructions}</p>
-           <a href={"https://www.themealdb.com/meal/" + idMeal} target="_blank">Ingredients</a>
+                <a href={"https://www.themealdb.com/meal/" + idMeal} target="_blank"><h3>{strMeal}</h3></a>
+            </div>
         </div>
-        
-    </div>
-  );
-}
+    )
+};
 
 export default Card;

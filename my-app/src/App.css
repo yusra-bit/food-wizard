@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: #FAFAFA;
 }
  .searchBar{
     width: 100%;
@@ -13,7 +14,7 @@
 
 form .text-input{
     width: 400px;
-    border: 1px solild black;
+border: 1px solid grey;
     padding: 10px;   
 
 }
@@ -26,15 +27,37 @@ form .btn{
     
 
 }
+.recipes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin:0 20px 0 20px;
+  }
+.card {
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+  }
+  
+  .card-image {
+    width: 100%;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  .card-body, h3 {
+    background-color: white;
 
-.recipeCard{
-    
-    
-}
-.card-img{
-    
+    padding: 10px;
+    text-align: center;
+  }
+  
    
-}
+
 @media (max-width:480px) {
    
     form .text-input{
