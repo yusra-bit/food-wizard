@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+//import Recipes from './components/Recipes';
 
 const Card = ({recipe}) => {
-    const { idMeal, strMeal,strCategory, strMealThumb, strInstructions} = recipe;
+    const { idMeal, strMeal, strCategory, strMealThumb, strInstructions } = recipe;
 
 let items = [];
 for (let i = 1; i <= 20; i++) {
@@ -42,10 +44,12 @@ for (let i = 1; i <= 20; i++) {
                 className="card-image"
             />
             <div className="card-body">
+            <Link to="/Recipes" className="title">{strMeal}  </Link>
+
             
-                <a href={"https://www.themealdb.com/meal/" + idMeal} target="_blank"><h3>{strMeal}</h3></a>
+      
+    </div>
             </div>
-        </div>
     )
 };
 

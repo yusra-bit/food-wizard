@@ -1,5 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, NavLink } from 'react-router-dom';
 import './App.css';
 import { Navbar } from './components/Navbar';
 import { About } from './components/pages/About';
@@ -8,6 +8,7 @@ import SearchBar from './components/SearchBar';
 import Cards from './components/Cards';
 
 import { useEffect, useState } from 'react';
+import { Recipes } from './components/Recipes';
 
 const apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
@@ -45,11 +46,10 @@ function App() {
     <div className='container'>
     <div className="App">
      <Navbar />
-     <Routes>
-      <Route path="/about" element={<About />} />
-      <Route path="/liked" element={<Liked />}  />
-
-     </Routes>
+     <NavLink path="/recipes" >
+      <Recipes />
+     </NavLink>
+   
     </div>
    <SearchBar 
       handleSubmit={handleSubmit}
